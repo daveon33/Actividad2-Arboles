@@ -9,6 +9,8 @@ public class Main {
         arbol.insertar(12);
         arbol.insertar(31);
         arbol.recorridoInorder();
+        arbol.buscarNumero(75);
+        arbol.buscarNumero(0);
 
 
     }

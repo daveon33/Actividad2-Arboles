@@ -82,8 +82,8 @@ public class ArbolBinario {
 
         while(ultimoNodo != null) {
             if(numero == ultimoNodo.numero) {
-                System.out.println("El número existe en el arbol");
-                break;
+                System.out.println("El número " + numero + " existe en el arbol!");
+                return;
             } else if (numero < ultimoNodo.numero) {
                 ultimoNodo = ultimoNodo.izquierda;
             } else {
@@ -91,7 +91,7 @@ public class ArbolBinario {
             }
         }
 
-        System.out.println("No existe este número en el arbol");
+        System.out.println("El número " + numero + " no existe en el arbol...");
     }
 
 
