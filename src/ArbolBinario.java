@@ -71,6 +71,23 @@ public class ArbolBinario {
         System.out.println();
     }
 
+    public void buscarNumero(int numero) {
+        Nodo ultimoNodo = raiz;
+
+        while(ultimoNodo != null) {
+            if(numero == ultimoNodo.numero) {
+                System.out.println("El número existe en el arbol");
+                break;
+            } else if (numero < ultimoNodo.numero) {
+                ultimoNodo = ultimoNodo.izquierda;
+            } else {
+                ultimoNodo = ultimoNodo.derecha;
+            }
+        }
+
+        System.out.println("No existe este número en el arbol");
+    }
+
 
 
 
