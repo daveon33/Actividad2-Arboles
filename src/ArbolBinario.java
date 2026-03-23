@@ -49,4 +49,33 @@ public class ArbolBinario {
             }
         }
     }
+
+    /* Este par de métodos usan la recursividad para recorrertodo el arbol
+    de izquierda a derecha, básicamente se va a llamar a la misma función
+    hasta que esta se encuentre con un nodo nulo, deteniendo la función y
+    devolviendo los valores en el orden de menor a mayor.
+     */
+
+    public void recorridoInorder(Nodo nodo) {
+        if(nodo == null) {
+            return;
+        }
+
+        recorridoInorder(nodo.izquierda);
+        System.out.println(nodo.numero + " ");
+        recorridoInorder(nodo.derecha);
+    }
+
+    public void recorridoInorder() {
+        recorridoInorder(raiz);
+        System.out.println();
+    }
+
+
+
+
+
+
+
+
 }
