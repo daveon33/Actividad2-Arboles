@@ -1,2 +1,52 @@
 public class ArbolBinario {
+
+    // Clase nodo tiene un valor y dos nodos hijos
+    class Nodo {
+        int numero;
+        Nodo izquierda, derecha;
+    }
+
+    // Dejamos el constructor por defecto, al crear una instancia de ArbolBinario se inicializa raiz como null
+    Nodo raiz;
+
+    public void insertar(int numero) {
+        Nodo nuevoNodo = new Nodo();
+        nuevoNodo.numero = numero;
+        nuevoNodo.izquierda = null; // Cada nuevo nodo se inicializa con dos nodos hijos null a la izq y der
+        nuevoNodo.derecha = null;
+
+        // Cuando aún no existen nodos en el arbol, el primero insertado será la raiz
+        if(raiz == null) {
+            raiz = nuevoNodo;
+            return;
+        }
+
+        Nodo ultimoNodo = raiz; // El nodo sobre el que estamos trabajando en momento
+
+        /* La lógica del arbol es la siguiente, a partir de este punto se entiende
+        que ya existe un nodo previo, es aqui donde evaluamos si el valor del nuevo
+        nodo insertado debe ir a la izquierda o a la derecha del nodo actual,
+        para eso revisamos primero su valor y luego si hay un espacio libre a la izquierda
+        o a la derecha dependiendo del caso, logrando así la asignación del nuevo nodo
+        correctamente en el arbol
+         */
+
+        while(true) {
+            if(numero < ultimoNodo.numero) {
+                if(ultimoNodo.izquierda == null) {
+                    ultimoNodo.izquierda = nuevoNodo;
+                    break;
+                }
+
+                ultimoNodo = ultimoNodo.izquierda; // Caso en el que el nodo a la izquierda esté ocupado
+            } else {
+                if(ultimoNodo.derecha == null) {
+                    ultimoNodo.derecha = nuevoNodo;
+                    break;
+                }
+
+                ultimoNodo = ultimoNodo.derecha;
+            }
+        }
+    }
 }
