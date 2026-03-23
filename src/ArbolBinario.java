@@ -62,7 +62,7 @@ public class ArbolBinario {
         }
 
         recorridoInorder(nodo.izquierda);
-        System.out.println(nodo.numero + " ");
+        System.out.print(nodo.numero + " ");
         recorridoInorder(nodo.derecha);
     }
 
