@@ -71,6 +71,12 @@ public class ArbolBinario {
         System.out.println();
     }
 
+    /* El metodo buscar numero va a revisar el valor de cada uno
+    de los nodos hasta encontrar uno con el mismo valor empezando
+    desde la raiz y hasta encontrarse con un nodo nulo, en dicho caso
+    no se entiende que no existe dicho numero en el arbol.
+     */
+
     public void buscarNumero(int numero) {
         Nodo ultimoNodo = raiz;
 
