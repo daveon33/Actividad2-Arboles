@@ -9,5 +9,7 @@ public class Main {
         arbol.insertar(12);
         arbol.insertar(31);
         arbol.recorridoInorder();
+
+
     }
 }
